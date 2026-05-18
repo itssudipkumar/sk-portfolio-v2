@@ -1,0 +1,178 @@
+/* ============================================================
+   loader.css — Preloader, scroll progress bar, nav
+   ============================================================ */
+
+/* ── SCROLL PROGRESS ───────────────────────────────────────── */
+#prog {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px; width: 0%;
+  z-index: 999;
+  background: linear-gradient(90deg, var(--accent2), var(--accent));
+  box-shadow: 0 0 10px rgba(125, 211, 252, 0.5);
+  transition: width 0.1s linear;
+}
+
+/* ── CANVAS (Three.js universe bg) ────────────────────────── */
+#c3 {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ── PRELOADER ─────────────────────────────────────────────── */
+#loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  background: #02030a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  clip-path: inset(0 0 0% 0);
+}
+
+.ld-logo {
+  width: 90px;
+  opacity: 0;
+  transform: scale(0.7);
+}
+
+.ld-word {
+  font-family: var(--display);
+  font-size: clamp(0.9rem, 3vw, 2rem);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--white);
+  display: flex;
+  gap: 0.04em;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+.ld-word span {
+  display: inline-block;
+  transform: translateY(110%);
+  opacity: 0;
+}
+
+.ld-bar-wrap {
+  width: 160px;
+  height: 1px;
+  background: rgba(125, 211, 252, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+.ld-bar {
+  position: absolute;
+  inset: 0;
+  width: 0%;
+  background: var(--accent);
+  transition: width 0.05s linear;
+}
+
+.ld-num {
+  font-family: var(--display);
+  font-size: 0.55rem;
+  letter-spacing: 0.25em;
+  color: var(--accent);
+}
+
+/* ── NAV ───────────────────────────────────────────────────── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 500;
+  padding: 0.8rem 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0;
+  transform: translateY(-16px);
+  background: linear-gradient(to bottom, rgba(2,3,10,0.92) 0%, transparent 100%);
+  backdrop-filter: blur(4px);
+}
+
+.n-logo img {
+  height: 46px;
+  display: block;
+  filter: drop-shadow(0 0 10px rgba(125, 211, 252, 0.3));
+}
+
+.n-links {
+  display: flex;
+  gap: 2.2rem;
+}
+.n-links a {
+  font-family: var(--display);
+  font-size: 0.52rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--body-txt);
+  transition: color 0.3s;
+}
+.n-links a:hover { color: var(--accent); }
+
+.n-badge {
+  font-family: var(--display);
+  font-size: 0.5rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 0.42rem 1rem;
+  border: 1px solid var(--border);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+.n-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: bdot 2s infinite;
+}
+@keyframes bdot {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.2; }
+}
+
+@media (max-width: 1024px) {
+  nav {
+    padding: 0.75rem 4vw;
+  }
+
+  .n-links {
+    gap: 1.4rem;
+  }
+
+  .n-badge {
+    font-size: 0.46rem;
+    padding: 0.38rem 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 0.7rem 4vw;
+  }
+
+  .n-logo img {
+    height: 40px;
+  }
+
+  .n-badge {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  nav {
+    padding: 0.65rem 4vw;
+  }
+
+  .n-logo img {
+    height: 36px;
+  }
+}

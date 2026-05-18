@@ -1,0 +1,220 @@
+/* ============================================================
+   hero.css — Hero section styles
+   ============================================================ */
+
+#hero {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 5vw 8vh;
+  overflow: hidden;
+}
+
+.h-tag {
+  font-family: var(--display);
+  font-size: 0.52rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  opacity: 0;
+  transform: translateY(16px);
+}
+.h-tag::before {
+  content: '';
+  width: 32px; height: 1px;
+  background: var(--accent);
+}
+
+/* ── BIG DISPLAY NAME ──────────────────────────────────────── */
+.h-title {
+  font-family: var(--display);
+  font-weight: 900;
+  /* slightly reduced overall size so first line can be prominent but not oversized */
+  font-size: clamp(4rem, 10vw, 12rem);
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  
+  margin-bottom: 0.3rem;
+}
+
+.h-title .line:first-child {
+  /* Make 'SUDIP' the prominent line */
+  font-size: 1.06em; /* slightly larger than base */
+  color: var(--white);
+}
+.h-title .line:last-child {
+  /* Make 'KUMAR SAH' smaller than 'SUDIP' */
+  font-size: 0.78em; /* noticeably smaller but still bold */
+  margin-top: 0.12em;
+  color: var(--accent);
+}
+.h-title .line  { display: block; overflow: hidden; }
+.h-title .char  { display: inline-block; transform: translateY(110%); opacity: 0; }
+
+/* ── ITALIC SERIF SUBTITLE ─────────────────────────────────── */
+.h-sub-title {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(2.5rem, 6vw, 7rem);
+  line-height: 0.95;
+  color: var(--body-txt);
+  margin-bottom: 3rem;
+  overflow: hidden;
+}
+.h-sub-title .char { display: inline-block; transform: translateY(110%); opacity: 0; }
+
+/* ── FOOTER ROW ────────────────────────────────────────────── */
+.h-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.h-desc {
+  max-width: 480px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.85;
+  color: var(--body-txt);
+}
+.h-desc strong { color: var(--white); font-weight: 600; }
+
+.h-btns { display: flex; gap: 0.8rem; flex-shrink: 0; }
+
+/* ── FLOATING STAMPS ───────────────────────────────────────── */
+.h-stamps {
+  position: absolute;
+  right: 5vw; top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: flex-end;
+  opacity: 0;
+}
+.stamp {
+  font-family: var(--display);
+  font-size: 0.48rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--body-txt);
+  padding: 0.42rem 0.9rem;
+  border: 1px solid var(--ghost);
+  background: rgba(2, 3, 10, 0.6);
+  backdrop-filter: blur(8px);
+  transition: border-color 0.3s, color 0.3s;
+}
+.stamp:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ── SHARED BUTTON STYLES ──────────────────────────────────── */
+.btn {
+  font-family: var(--display);
+  font-size: 0.52rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.9rem 2rem;
+  transition: all 0.3s;
+  display: inline-block;
+}
+.btn-a {
+  background: var(--accent);
+  color: #02030a;
+  font-weight: 700;
+  box-shadow: 0 0 28px rgba(125, 211, 252, 0.25);
+}
+.btn-a:hover {
+  background: var(--white);
+  box-shadow: 0 0 50px rgba(125, 211, 252, 0.4);
+  transform: translateY(-2px);
+}
+.btn-b {
+  border: 1px solid var(--border);
+  color: var(--off);
+}
+.btn-b:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  #hero {
+    min-height: auto;
+    padding: 10rem 5vw 6rem;
+  }
+
+  .h-title {
+    font-size: clamp(3.2rem, 9vw, 8rem);
+  }
+
+  .h-desc {
+    max-width: 420px;
+  }
+
+  .h-stamps {
+    right: 3vw;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero {
+    padding: 8.5rem 5vw 4.5rem;
+  }
+
+  .h-tag {
+    font-size: 0.46rem;
+    letter-spacing: 0.18em;
+    margin-bottom: 1.2rem;
+  }
+
+  .h-title {
+    font-size: clamp(2.9rem, 13vw, 5.5rem);
+  }
+
+  .h-bottom {
+    gap: 1.25rem;
+  }
+
+  .h-desc {
+    max-width: none;
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 520px) {
+  #hero {
+    padding: 7.5rem 5vw 4rem;
+  }
+
+  .h-title {
+    font-size: clamp(2.6rem, 15vw, 4.5rem);
+  }
+
+  .h-desc {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .h-btns {
+    width: 100%;
+  }
+
+  .btn {
+    padding: 0.85rem 1.4rem;
+  }
+}

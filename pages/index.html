@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--
+    pages/index.html  Main portfolio page
+    Shared fragments live in pages/includes/
+    CSS  → ../css/*.css
+    JS   → ../js/*.js
+    Imgs → ../assets/images/
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Sudip Kumar Sah  IT Support Specialist & Developer. Final-year BIT student at Melbourne Polytechnic.">
+  <meta name="author" content="Sudip Kumar Sah">
+  <meta property="og:title" content="Sudip Kumar Sah  Portfolio">
+  <meta property="og:description" content="IT Support Specialist & Developer. Melbourne, AU.">
+  <meta property="og:type" content="website">
+
+  <!-- Report-only Content Security Policy: adjust and monitor reports before enforcing -->
+  <meta http-equiv="Content-Security-Policy-Report-Only"
+    content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; report-uri /csp-report">
+
+  <title>Sudip Kumar Sah  Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/images/logo-gold.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;700;900&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets (order matters) -->
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/loader.css">
+  <link rel="stylesheet" href="../css/hero.css">
+  <link rel="stylesheet" href="../css/sections.css">
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════
+       PRELOADER  ← pages/includes/loader.html
+       ═══════════════════════════════════════════════════════ -->
+  <div id="loader">
+    <img id="ldlogo" class="ld-logo" src="../assets/images/logo-gold.png" alt="SD Logo" width="200" height="110">
+    <div class="ld-word" id="ldw">
+      <span>S</span><span>U</span><span>D</span><span>I</span><span>P</span>
+      <span>&nbsp;</span>
+      <span>K</span><span>U</span><span>M</span><span>A</span><span>R</span>
+      <span>&nbsp;</span>
+      <span>S</span><span>A</span><span>H</span>
+    </div>
+    <div class="ld-bar-wrap">
+      <div class="ld-bar" id="lbar"></div>
+    </div>
+    <div class="ld-num" id="lnum">0%</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       NAV  ← pages/includes/nav.html
+       ═══════════════════════════════════════════════════════ -->
+  <div id="prog"></div>
+  <canvas id="c3"></canvas>
+
+  <nav id="nav">
+    <div class="n-logo">
+      <a href="#hero">
+        <img src="../assets/images/logo-silver.png" alt="Sudip Kumar Sah" height="46">
+      </a>
+    </div>
+    <div class="n-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="n-badge">
+      <div class="n-dot"></div>Open to Work
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HERO
+       ═══════════════════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="h-tag" id="htag">IT Support &amp; Web Developer · Melbourne AU</div>
+
+    <h1 class="h-title" id="htitle">
+      <span class="line">
+        <span class="char">S</span><span class="char">U</span><span class="char">D</span><span
+          class="char">I</span><span class="char">P</span>
+      </span>
+      <span class="line">
+        <span class="char">K</span><span class="char">U</span><span class="char">M</span><span
+          class="char">A</span><span class="char">R</span>
+          <span class="char">S</span><span class="char">A</span><span class="char">H</span>
+      </span>
+    </h1>
+
+    <div class="h-bottom" id="hbot">
+      <p class="h-desc">
+        <strong>Final-year BIT student</strong> at Melbourne Polytechnic  building AI systems,
+        resilient networks, and modern web platforms. Ready for an entry-level IT Support role.
+      </p>
+      <div class="h-btns">
+        <a href="#projects" class="btn btn-a">View Projects</a>
+        <a href="#contact" class="btn btn-b">Let's Talk</a>
+      </div>
+    </div>
+
+    <div class="h-stamps" id="hstamps">
+      <div class="stamp">Python · OpenAI API</div>
+      <div class="stamp">TCP/IP · Networking</div>
+      <div class="stamp">SQL · Databases</div>
+      <div class="stamp">UML · SDLC</div>
+      <div class="stamp">Web Development</div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       ABOUT
+       ═══════════════════════════════════════════════════════ -->
+  <section id="about" class="sec-transition">
+    <div class="wrap">
+      <div class="s-rule" id="r1"></div>
+      <div class="s-eye rx" id="e1">001 / About Me</div>
+
+      <div class="s-head" id="sh1">
+        <span class="char">W</span><span class="char">h</span><span class="char">o</span>
+        <span class="char">&nbsp;</span>
+        <span class="char">I</span>
+        <span class="char">&nbsp;</span>
+        <span class="char">A</span><span class="char">m</span>
+      </div>
+      <div class="s-sub" id="ss1">
+        <span class="char">A</span><span class="char">s</span><span class="char">p</span><span class="char">i</span><span class="char">r</span><span class="char">i</span><span class="char">n</span><span class="char">g</span><span class="char">&nbsp;</span><span class="char">I</span><span class="char">T</span><span class="char">&nbsp;</span><span class="char">S</span><span class="char">p</span><span class="char">e</span><span class="char">c</span><span class="char">i</span><span class="char">a</span><span class="char">l</span><span class="char">i</span><span class="char">s</span><span class="char">t</span>
+      </div>
+
+      <div class="ab-layout">
+        <!-- Left: bio text + stats -->
+        <div id="abt">
+          <p class="ab-p">
+            I'm <strong>Sudip Kumar Sah</strong>, an IT student and developer focused on building
+            systems that <em>actually work</em>. My work spans network topology design, relational
+            databases, AI-powered applications, and complete systems analysis  backed by
+            real-world delivery.
+          </p>
+          <p class="ab-p">
+            I've shipped <strong>four production projects</strong>  an invoice generator, a
+            visitor management system, an IT company website, and a cleaning services platform 
+            while pushing deep into academic AI, advanced SQL, and UML modelling.
+          </p>
+          <p class="ab-p">
+            The best IT professionals combine <em>technical precision</em> with clear communication
+            and reliability. I've refined that edge at KFC  a high-velocity, customer-facing
+            environment where vagueness and error simply aren't options.
+          </p>
+
+          <div class="nums" id="nums">
+            <div class="num-c"><span class="num-big">9+</span>
+              <div class="num-lbl">Projects</div>
+            </div>
+            <div class="num-c"><span class="num-big">2</span>
+              <div class="num-lbl">Degrees</div>
+            </div>
+            <div class="num-c"><span class="num-big">BIT</span>
+              <div class="num-lbl">Final Year</div>
+            </div>
+            <div class="num-c"><span class="num-big">VIC</span>
+              <div class="num-lbl">Melbourne</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: profile card -->
+        <div>
+          <div class="pcard" id="pcard">
+            <div class="pc-inner">
+              <div class="pc-name">SUDIP KUMAR SAH</div>
+              <div class="pc-role">Aspiring IT Support Specialist | Web Developer | AI Enthusiast</div>
+              <div class="pc-row"><span class="pc-k">Email</span><span class="pc-v">kumarsudip2023@gmail.com</span>
+              </div>
+              <div class="pc-row"><span class="pc-k">Phone</span><span class="pc-v">0420 737 706</span></div>
+              <div class="pc-row"><span class="pc-k">Location</span><span class="pc-v">Burwood 3125, VIC</span></div>
+              <div class="pc-row"><span class="pc-k">Website</span><span class="pc-v">itssudip.com</span></div>
+              <div class="pc-row"><span class="pc-k">GitHub</span><span class="pc-v">itssudipkumar</span></div>
+              <div class="pc-row" style="border-bottom:none">
+                <span class="pc-k">Status</span><span class="pc-v live">● Open to Work</span>
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tg">TCP/IP</span><span class="tg">DNS/DHCP</span>
+              <span class="tg">Python</span><span class="tg">OpenAI API</span>
+              <span class="tg">SQL</span><span class="tg">Active Directory</span>
+              <span class="tg">UML</span><span class="tg">SDLC</span>
+              <span class="tg">Windows</span><span class="tg">macOS</span>
+              <span class="tg">Web Dev</span><span class="tg">MS 365</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SKILLS
+       ═══════════════════════════════════════════════════════ -->
+  <section id="skills" class="sec-transition">
+    <div class="wrap" style="padding-bottom:0">
+      <div class="s-rule" id="r2"></div>
+      <div class="s-eye rx" id="e2">002 / Skills</div>
+      <div class="s-head" id="sh2">
+        <span class="char">S</span><span class="char">K</span><span class="char">I</span>
+        <span class="char">L</span><span class="char">L</span><span class="char">S</span>
+      </div>
+      <div class="s-sub" id="ss2">
+        <span class="char">T</span><span class="char">e</span><span class="char">c</span><span class="char">h</span><span class="char">n</span><span class="char">i</span><span class="char">c</span><span class="char">a</span><span class="char">l</span><span class="char">&nbsp;</span><span class="char">E</span><span class="char">x</span><span class="char">p</span><span class="char">e</span><span class="char">r</span><span class="char">t</span><span class="char">i</span><span class="char">s</span><span class="char">e</span>
+      </div>
+    </div>
+
+    <!-- Marquee ticker -->
+    <div class="mq">
+      <div class="mq-r r1">
+        <span class="mi on">TCP/IP</span><span class="mi">·</span>
+        <span class="mi">DNS/DHCP</span><span class="mi">·</span>
+        <span class="mi on">Python</span><span class="mi">·</span>
+        <span class="mi">OpenAI API</span><span class="mi">·</span>
+        <span class="mi on">SQL</span><span class="mi">·</span>
+        <span class="mi">Active Directory</span><span class="mi">·</span>
+        <span class="mi on">UML</span><span class="mi">·</span>
+        <span class="mi">SDLC</span><span class="mi">·</span>
+        <span class="mi on">Web Dev</span><span class="mi">·</span>
+        <span class="mi">MS 365</span><span class="mi">·</span>
+        <!-- duplicate for seamless loop -->
+        <span class="mi on">TCP/IP</span><span class="mi">·</span>
+        <span class="mi">DNS/DHCP</span><span class="mi">·</span>
+        <span class="mi on">Python</span><span class="mi">·</span>
+        <span class="mi">OpenAI API</span><span class="mi">·</span>
+      </div>
+      <div class="mq-r r2">
+        <span class="mi">Network Topology</span><span class="mi">·</span>
+        <span class="mi on">Data Integrity</span><span class="mi">·</span>
+        <span class="mi">Normalisation</span><span class="mi">·</span>
+        <span class="mi on">Risk Management</span><span class="mi">·</span>
+        <span class="mi">Requirements Tracing</span><span class="mi">·</span>
+        <span class="mi on">Responsive Design</span><span class="mi">·</span>
+        <span class="mi">Change Management</span><span class="mi">·</span>
+        <span class="mi on">AI Integration</span><span class="mi">·</span>
+        <!-- duplicate -->
+        <span class="mi">Network Topology</span><span class="mi">·</span>
+        <span class="mi on">Data Integrity</span><span class="mi">·</span>
+      </div>
+    </div>
+
+    <!-- Skill cards -->
+    <div style="padding:0 5vw 9rem;max-width:1360px;margin:0 auto">
+      <div class="sk-grid" id="skgrid">
+
+        <div class="sk-card">
+          <div class="sk-icon">Networking</div>
+          <div class="sk-name">TCP/IP &amp; Network Design</div>
+          <div class="sk-desc">Designed and tested small-business network topologies. Applied DNS, DHCP, connectivity
+            validation, and failure-condition testing with full documentation.</div>
+          <div class="sk-pills">
+            <span class="sk-pill">TCP/IP</span><span class="sk-pill">DNS</span>
+            <span class="sk-pill">DHCP</span><span class="sk-pill">Topology Design</span>
+            <span class="sk-pill">Failure Testing</span>
+          </div>
+        </div>
+
+        <div class="sk-card">
+          <div class="sk-icon">Databases</div>
+          <div class="sk-name">SQL &amp; Database Systems</div>
+          <div class="sk-desc">Advanced SQL  JOINs, subqueries, aggregations. Normalised relational schemas, data
+            integrity validation, schema design, and ERD modelling.</div>
+          <div class="sk-pills">
+            <span class="sk-pill">SQL</span><span class="sk-pill">JOINs</span>
+            <span class="sk-pill">Normalisation</span><span class="sk-pill">ERD</span>
+            <span class="sk-pill">Data Integrity</span>
+          </div>
+        </div>
+
+        <div class="sk-card">
+          <div class="sk-icon">IT Systems</div>
+          <div class="sk-name">Windows &amp; IT Support</div>
+          <div class="sk-desc">Windows and macOS administration, Active Directory, Microsoft 365, hardware
+            troubleshooting, and systematic diagnostics for IT support environments.</div>
+          <div class="sk-pills">
+            <span class="sk-pill">Windows</span><span class="sk-pill">macOS</span>
+            <span class="sk-pill">Active Directory</span><span class="sk-pill">MS 365</span>
+            <span class="sk-pill">Hardware</span>
+          </div>
+        </div>
+
+        <div class="sk-card">
+          <div class="sk-icon">AI &amp; Dev</div>
+          <div class="sk-name">Python &amp; AI Integration</div>
+          <div class="sk-desc">Python-based AI chat app integrating OpenAI API. Conversational flow testing, edge-case
+            handling, API response refinement, and technical documentation.</div>
+          <div class="sk-pills">
+            <span class="sk-pill">Python</span><span class="sk-pill">OpenAI API</span>
+            <span class="sk-pill">Chat AI</span><span class="sk-pill">Edge Testing</span>
+          </div>
+        </div>
+
+        <div class="sk-card">
+          <div class="sk-icon">Analysis</div>
+          <div class="sk-name">Systems Design &amp; Analysis</div>
+          <div class="sk-desc">UML artefacts  use case, activity, sequence diagrams. Full SDLC  requirements
+            gathering, DFD, architecture design, and change management.</div>
+          <div class="sk-pills">
+            <span class="sk-pill">UML</span><span class="sk-pill">SDLC</span>
+            <span class="sk-pill">Use Cases</span><span class="sk-pill">DFD</span>
+            <span class="sk-pill">Change Mgmt</span>
+          </div>
+        </div>
+
+        <div class="sk-card">
+          <div class="sk-icon">Web &amp; Docs</div>
+          <div class="sk-name">Web Dev &amp; Documentation</div>
+          <div class="sk-desc">Responsive business websites, invoice platforms, IT portals, visitor management systems.
+            Technical docs, risk management, status reports, and sign-off materials.</div>
+          <div class="sk-pills">
+            <span class="sk-pill">Web Dev</span><span class="sk-pill">Responsive</span>
+            <span class="sk-pill">Tech Docs</span><span class="sk-pill">Risk Mgmt</span>
+            <span class="sk-pill">Project Plans</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       PROJECTS
+       ═══════════════════════════════════════════════════════ -->
+  <section id="projects" class="sec-transition">
+    <div class="wrap">
+      <div class="s-rule" id="r3"></div>
+      <div class="proj-top">
+        <div>
+          <div class="s-eye rx" id="e3">003 / Projects</div>
+          <div class="s-head" id="sh3">
+            <span class="char">W</span><span class="char">o</span><span class="char">r</span>
+            <span class="char">k</span><span class="char">s</span>
+          </div>
+          <div class="s-sub" id="ss3">
+            <span class="char">W</span><span class="char">h</span><span class="char">a</span><span class="char">t</span><span class="char">&nbsp;</span><span class="char">I</span><span class="char">'</span><span class="char">v</span><span class="char">e</span><span class="char">&nbsp;</span><span class="char">B</span><span class="char">u</span><span class="char">i</span><span class="char">l</span><span class="char">t</span>
+          </div>
+        </div>
+        <div class="pfilts">
+          <button class="pf on" onclick="filterP('all',  this)">All</button>
+          <button class="pf" onclick="filterP('real', this)">Real-World</button>
+          <button class="pf" onclick="filterP('acad', this)">Academic</button>
+        </div>
+      </div>
+
+      <div class="plist" id="plist">
+
+        <!-- Real-world projects -->
+        <div class="prow" data-cat="real">
+          <div class="p-num">01</div>
+          <div>
+            <div class="p-kind real">● Real-World · Live</div>
+            <div class="p-name">Yuno  Invoice Generator</div>
+            <div class="p-blurb">Free invoice platform for business owners &amp; sole traders. Generates, previews, and
+              sends invoices with automatic tracking of earnings, pending payments, overdue invoices, and tax
+              calculations. All data stored locally.</div>
+            <div class="p-chips">
+              <span class="chip">Invoice Gen</span><span class="chip">Local Storage</span>
+              <span class="chip">Tax Calculation</span><span class="chip">Payment Tracking</span>
+              <span class="chip">Business Tools</span>
+            </div>
+          </div>
+          <div class="p-arr">→</div>
+        </div>
+
+        <div class="prow" data-cat="real">
+          <div class="p-num">02</div>
+          <div>
+            <div class="p-kind real">● Real-World · Live</div>
+            <div class="p-name">TechnoForty  IT Company Website</div>
+            <div class="p-blurb">Full IT services platform showcasing Web Development, Cloud Solutions, AI Integration,
+              and IT Infrastructure Services. Responsive design, scalability, and polished business presentation.</div>
+            <div class="p-chips">
+              <span class="chip">Web Dev</span><span class="chip">Cloud Solutions</span>
+              <span class="chip">AI Integration</span><span class="chip">Responsive</span>
+              <span class="chip">IT Infrastructure</span>
+            </div>
+          </div>
+          <div class="p-arr">→</div>
+        </div>
+
+        <div class="prow" data-cat="real">
+          <div class="p-num">03</div>
+          <div>
+            <div class="p-kind real">● Real-World · Live</div>
+            <div class="p-name">NCAP-VMS  Visitor Management System</div>
+            <div class="p-blurb">Visitor entry &amp; exit management app tracking registration details, company info,
+              departments visited, and full visitor logs. Designed for organisational monitoring and workflow
+              management.</div>
+            <div class="p-chips">
+              <span class="chip">Visitor Tracking</span><span class="chip">Entry/Exit Logs</span>
+              <span class="chip">Org Management</span><span class="chip">Workflow Design</span>
+            </div>
+          </div>
+          <div class="p-arr">→</div>
+        </div>
+
+        <div class="prow" data-cat="real">
+          <div class="p-num">04</div>
+          <div>
+            <div class="p-kind real">● Real-World · Live</div>
+            <div class="p-name">SS Cleaning Service  Business Website</div>
+            <div class="p-blurb">Responsive business website for a cleaning services company. Customer engagement,
+              service presentation, and accessibility-first design with clear conversion pathways.</div>
+            <div class="p-chips">
+              <span class="chip">Responsive Design</span><span class="chip">Business Website</span>
+              <span class="chip">Accessibility</span><span class="chip">Engagement</span>
+            </div>
+          </div>
+          <div class="p-arr">→</div>
+        </div>
+
+        <!-- Academic projects -->
+        <div class="prow" data-cat="acad">
+          <div class="p-num">05</div>
+          <div>
+            <div class="p-kind prog">◐ Academic · In Progress</div>
+            <div class="p-name">AI Companion Chat System</div>
+            <div class="p-blurb">Python-based AI chat app integrating OpenAI API. Architecture and documentation
+              complete; coding in progress. Conversational flow testing, API response refinement, and edge-case
+              handling.</div>
+            <div class="p-chips">
+              <span class="chip">Python</span><span class="chip">OpenAI API</span>
+              <span class="chip">Conversational AI</span><span class="chip">Edge Testing</span>
+              <span class="chip">Technical Docs</span>
+            </div>
+          </div>
+          <div class="p-arr">→</div>
+        </div>
+
+        <div class="prow" data-cat="acad">
+          <div class="p-num">06</div>
+          <div>
+            <div class="p-kind acad">● Academic · Completed</div>
+            <div class="p-name">Network Design Project</div>
+            <div class="p-blurb">Designed and tested a small-business network topology applying TCP/IP, DNS, and DHCP.
+              Connectivity validation, failure-condition testing, and complete documentation of all configuration
+              processes.</div>
+            <div class="p-chips">
+              <span class="chip">TCP/IP</span><span class="chip">DNS/DHCP</span>
+              <span class="chip">Network Topology</span><span class="chip">Failure Testing</span>
+              <span class="chip">Docs</span>
+            </div>
+          </div>
+          <div class="p-arr">→</div>
+        </div>
+
+        <div class="prow" data-cat="acad">
+          <div class="p-num">07</div>
+          <div>
+            <div class="p-kind acad">● Academic · Completed</div>
+            <div class="p-name">Database Management System</div>
+            <div class="p-blurb">Relational database solution in SQL. Tested data integrity, relationships, and query
+              accuracy. Schema design, data flow validation, and verification procedures for robust data management.
+            </div>
+            <div class="p-chips">
+              <span class="chip">SQL</span><span class="chip">Relational DB</span>
+              <span class="chip">Schema Design</span><span class="chip">Data Integrity</span>
+              <span class="chip">Query Testing</span>
+            </div>
+          </div>
+          <div class="p-arr">→</div>
+        </div>
+
+        <div class="prow" data-cat="acad">
+          <div class="p-num">08</div>
+          <div>
+            <div class="p-kind acad">● Academic · Completed</div>
+            <div class="p-name">Systems Design &amp; Analysis</div>
+            <div class="p-blurb">UML artefacts  use case, activity, and sequence diagrams. Modelled system workflows
+              applying full SDLC: requirements gathering, architecture design, DFD, and change management.</div>
+            <div class="p-chips">
+              <span class="chip">UML</span><span class="chip">SDLC</span>
+              <span class="chip">Use Cases</span><span class="chip">Activity Diagrams</span>
+              <span class="chip">Requirements</span>
+            </div>
+          </div>
+          <div class="p-arr">→</div>
+        </div>
+
+        <div class="prow" data-cat="acad">
+          <div class="p-num">09</div>
+          <div>
+            <div class="p-kind acad">● Academic · Completed</div>
+            <div class="p-name">Advanced Database</div>
+            <div class="p-blurb">Advanced SQL  SELECT, JOINs, subqueries, aggregations. Normalised schemas with data
+              consistency validation. Project plans covering scope, risk management, testing, and validation.</div>
+            <div class="p-chips">
+              <span class="chip">Advanced SQL</span><span class="chip">JOINs</span>
+              <span class="chip">Normalisation</span><span class="chip">Risk Mgmt</span>
+              <span class="chip">Project Planning</span>
+            </div>
+          </div>
+          <div class="p-arr">→</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       EDUCATION
+       ═══════════════════════════════════════════════════════ -->
+  <section id="education" class="sec-transition">
+    <div class="wrap">
+      <div class="s-rule" id="r4"></div>
+      <div class="s-eye rx" id="e4">004 / Education</div>
+      <div class="s-head" id="sh4">
+        <span class="char">J</span><span class="char">o</span><span class="char">u</span>
+        <span class="char">r</span><span class="char">n</span><span class="char">e</span><span class="char">y</span>
+      </div>
+      <div class="s-sub" id="ss4">
+        <span class="char">A</span><span class="char">c</span><span class="char">a</span><span class="char">d</span><span class="char">e</span><span class="char">m</span><span class="char">i</span><span class="char">c</span><span class="char">&nbsp;</span><span class="char">F</span><span class="char">o</span><span class="char">u</span><span class="char">n</span><span class="char">d</span><span class="char">a</span><span class="char">t</span><span class="char">i</span><span class="char">o</span><span class="char">n</span>
+      </div>
+
+      <div class="edu-grid">
+
+        <div class="edu-c" id="ec1">
+          <div class="edu-n">01</div>
+          <div class="edu-deg">Bachelor of Information Technology</div>
+          <div class="edu-school">Melbourne Polytechnic</div>
+          <div class="edu-badge live">● Final Year · Ongoing</div>
+          <div class="edu-mods">
+            <span class="emod">Systems Architecture</span>
+            <span class="emod">Network Fundamentals</span>
+            <span class="emod">IT Project Planning</span>
+            <span class="emod">Systems Analysis</span>
+            <span class="emod">Database Management</span>
+            <span class="emod">Advanced Database</span>
+            <span class="emod">Mobile App Dev</span>
+            <span class="emod">Change Management</span>
+            <span class="emod">Documentation</span>
+          </div>
+        </div>
+
+        <div class="edu-c" id="ec2">
+          <div class="edu-n">02</div>
+          <div class="edu-deg">Diploma of Information Technology</div>
+          <div class="edu-school">Deakin University</div>
+          <div class="edu-badge done">✓ Completed</div>
+          <p class="edu-text">
+            Comprehensive IT foundation covering hardware, software systems, networking principles,
+            and problem-solving methodologies  feeding directly into degree-level study at
+            Melbourne Polytechnic.
+          </p>
+        </div>
+
+        <div class="edu-c" id="ec3">
+          <div class="edu-n">03</div>
+          <div class="edu-deg">High School Degree</div>
+          <div class="edu-school">Model Multiple Secondary School</div>
+          <div class="edu-badge done">✓ Completed</div>
+          <p class="edu-text">
+            The academic foundation that ignited a passion for technology and analytical thinking 
+            the origin of the entire journey into IT and systems work.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       CONTACT
+       ═══════════════════════════════════════════════════════ -->
+  <section id="contact" class="sec-transition">
+    <div class="ct-wrap">
+      <div class="ct-ghost">CONNECT</div>
+
+      <div class="ct-label ry" id="clbl">005 / Let's Talk</div>
+
+      <div class="ct-head" id="cth">
+        <span class="char">S</span><span class="char">a</span><span class="char">y</span>
+        <span class="char">&nbsp;</span>
+        <span class="char">H</span><span class="char">e</span><span class="char">l</span>
+        <span class="char">l</span><span class="char">o</span><span class="char">.</span>
+      </div>
+
+      <div class="ct-serif" id="cts">
+        <span class="char">L</span><span class="char">e</span><span class="char">t</span><span class="char">'</span><span class="char">s</span><span class="char">&nbsp;</span><span class="char">b</span><span class="char">u</span><span class="char">i</span><span class="char">l</span><span class="char">d</span><span class="char">&nbsp;</span><span class="char">s</span><span class="char">o</span><span class="char">m</span><span class="char">e</span><span class="char">t</span><span class="char">h</span><span class="char">i</span><span class="char">n</span><span class="char">g</span>
+      </div>
+
+      <p class="ct-sub ry" id="csub">
+        Actively seeking entry-level IT Support roles and open to collaborating on interesting
+        builds. My inbox is always open.
+      </p>
+
+      <div class="ct-btns ry" id="cbtns">
+        <a href="mailto:kumarsudip2023@gmail.com" class="btn btn-a">Send Email</a>
+        <a href="https://itssudip.com" target="_blank" rel="noopener" class="btn btn-b">Visit Portfolio ↗</a>
+      </div>
+
+      <div class="ct-lnks ry" id="clnks">
+        <a href="mailto:kumarsudip2023@gmail.com" class="cl">kumarsudip2023@gmail.com</a>
+        <a href="https://github.com/itssudipkumar" target="_blank" rel="noopener"
+          class="cl">github.com/itssudipkumar</a>
+        <a href="tel:0420737706" class="cl">0420 737 706</a>
+        <span class="cl" style="pointer-events:none;cursor:default">Burwood 3125, VIC</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER  ← pages/includes/footer.html
+       ═══════════════════════════════════════════════════════ -->
+  <footer>
+    <div class="fl">
+      <img src="../assets/images/logo-silver.png" alt="Sudip Kumar Sah" height="36">
+    </div>
+    <div class="fr">© 2026 · Melbourne, AU · itssudip.com</div>
+    <div class="fr accent">Built with passion</div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SCRIPTS  order matters
+       Three.js → GSAP → ScrollTrigger → universe → animations
+       ═══════════════════════════════════════════════════════ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="REPLACE_WITH_SRI_HASH" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="REPLACE_WITH_SRI_HASH" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="REPLACE_WITH_SRI_HASH" crossorigin="anonymous"></script>
+  <script src="../js/universe.js"></script>
+  <script src="../js/animations.js"></script>
+
+</body>
+
+</html>

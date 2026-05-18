@@ -1,0 +1,65 @@
+/* ============================================================
+   variables.css — Design tokens & CSS reset
+   Sudip Kumar Sah Portfolio
+   ============================================================ */
+
+/* ── GOOGLE FONTS ──────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;700;900&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap');
+
+/* ── TOKENS ────────────────────────────────────────────────── */
+:root {
+  /* Backgrounds */
+  --bg:        #02030a;
+  --bg2:       #080c18;
+  --surface:   #0d1120;
+
+  /* Accent — single ice-blue system */
+  --accent:    #7dd3fc;
+  --accent2:   #3b82f6;
+
+  /* Text hierarchy — all high-contrast on dark bg */
+  --white:     #ffffff;
+  --off:       #e2e8f4;   /* primary headings / strong text   */
+  --body-txt:  #b8c8e0;   /* body copy — readable on dark bg  */
+  --muted:     #7a90b0;   /* secondary labels only            */
+
+  /* Borders & ghosts */
+  --ghost:     rgba(180, 210, 255, 0.08);
+  --border:    rgba(125, 211, 252, 0.18);
+
+  /* Typography */
+  --serif:     'Instrument Serif', serif;
+  --display:   'Unbounded', sans-serif;
+  --body:      'Inter', sans-serif;
+
+  /* Motion */
+  --ease-out:  cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:   cubic-bezier(0.4, 0, 1, 1);
+}
+
+/* ── RESET ─────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: auto; /* JS controls smooth scroll */
+}
+
+body {
+  background: var(--bg);
+  color: var(--off);
+  font-family: var(--body);
+  overflow-x: hidden;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; border: none; background: none; }
