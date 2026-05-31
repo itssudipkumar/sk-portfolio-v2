@@ -36,20 +36,19 @@ Key themes I bring to projects:
 Free invoice platform for business owners and sole traders. Generates, previews, and sends invoices with automatic tracking of earnings, pending payments, overdue invoices, and tax calculations. Data is stored locally for privacy-conscious users.  
 - **Tech:** LocalStorage, JavaScript, HTML/CSS  
 - **Highlights:** Simple UX for invoicing, tax calculation, and payment tracking.  
-- **Links:** Repo: https://github.com/itssudipkumar · Demo: https://itssudip.com#projects
+- **Links:** Repo: https://github.com/itssudipkumar/Yuno-InvoiceGenrator · Demo: https://yuno.technoforty.com.au
 
 ### TechnoForty : IT Company Website
 A full IT services website showcasing web development, cloud solutions, AI integration, and IT infrastructure services. Focused on responsive design, scalability, and polished business presentation.  
 - **Tech:** HTML/CSS, responsive design, content architecture  
 - **Highlights:** Business-focused UX, accessibility-first considerations.  
-- **Links:** Repo: https://github.com/itssudipkumar · Demo: https://itssudip.com#projects
+- **Links:** · Demo: https://technoforty.com.au
 
 ### NCAP-VMS : Visitor Management System
 Visitor entry and exit management app tracking registration details, company info, departments visited, and full visitor logs. Designed for organisational monitoring and workflow management.  
 - **Tech:** Web stack (server + client)  
 - **Highlights:** Robust logging, organisation-focused workflows, and administrative features.  
-- **Links:** Repo: https://github.com/itssudipkumar · Demo: https://itssudip.com#projects
-
+- **Links:** Repo: https://github.com/itssudipkumar/ncap-vms · Demo: https://ncap-vms.netlify.app/ 
 ---
 
 ## 🌟 Highlights & Impact
