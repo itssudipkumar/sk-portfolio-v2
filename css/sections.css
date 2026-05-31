@@ -646,6 +646,60 @@ section { position: relative; z-index: 10; }
   position: relative;
   z-index: 1;
 }
+.hire-form {
+  max-width: 760px;
+  margin: 0 auto 5rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(125, 211, 252, 0.16);
+  background: rgba(10, 20, 40, 0.62);
+  border-radius: 18px;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+}
+.hf-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.hf-field {
+  display: grid;
+  gap: 0.55rem;
+  margin-bottom: 1rem;
+}
+.hf-field span {
+  font-family: var(--display);
+  font-size: 0.46rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.hf-field input,
+.hf-field textarea {
+  width: 100%;
+  border: 1px solid rgba(125, 211, 252, 0.16);
+  background: rgba(5, 10, 20, 0.75);
+  color: var(--white);
+  border-radius: 12px;
+  padding: 0.95rem 1rem;
+  font: inherit;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.hf-field input::placeholder,
+.hf-field textarea::placeholder { color: rgba(180, 200, 230, 0.45); }
+.hf-field input:focus,
+.hf-field textarea:focus {
+  border-color: rgba(125, 211, 252, 0.65);
+  box-shadow: 0 0 0 3px rgba(125, 211, 252, 0.12);
+}
+.hf-field textarea { min-height: 150px; }
+.hf-submit {
+  width: 100%;
+  margin-top: 0.25rem;
+}
 .ct-lnks {
   display: flex;
   justify-content: center;
@@ -743,6 +797,10 @@ footer {
     padding: 8rem 5vw;
   }
 
+  .hire-form {
+    padding: 1.25rem;
+  }
+
   footer {
     flex-wrap: wrap;
     gap: 0.75rem 1.5rem;
@@ -758,6 +816,8 @@ footer {
   .nums         { grid-template-columns: repeat(2, 1fr); }
   .sk-grid      { grid-template-columns: 1fr; }
   .edu-grid     { grid-template-columns: 1fr; }
+  .hf-grid      { grid-template-columns: 1fr; }
+  .hire-form    { margin-bottom: 4rem; }
   .prow         { grid-template-columns: 60px 1fr; }
   .p-arr        { display: none; }
   .proj-top     { margin-bottom: 2.25rem; }

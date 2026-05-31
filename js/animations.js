@@ -239,7 +239,7 @@ function initScrollTriggers() {
       onEnter: () => animChars(ctsEl, 0.2)
     });
   }
-  ['#clbl', '#csub', '#cbtns', '#clnks'].forEach((id, i) => {
+  ['#clbl', '#csub', '#cbtns', '.hire-form', '#clnks'].forEach((id, i) => {
     const el = document.querySelector(id);
     if (!el) return;
     ScrollTrigger.create({
