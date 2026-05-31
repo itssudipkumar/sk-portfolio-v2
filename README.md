@@ -1,4 +1,4 @@
-# Sudip Kumar Sah — Aspiring IT Support Specialist & Web Developer
+# Sudip Kumar Sah : Aspiring IT Support Specialist & Web Developer
 
 🚀 Final-year BIT student building practical IT systems, AI tools, and polished web platforms.
 
@@ -36,25 +36,19 @@ Key themes I bring to projects:
 Free invoice platform for business owners and sole traders. Generates, previews, and sends invoices with automatic tracking of earnings, pending payments, overdue invoices, and tax calculations. Data is stored locally for privacy-conscious users.  
 - **Tech:** LocalStorage, JavaScript, HTML/CSS  
 - **Highlights:** Simple UX for invoicing, tax calculation, and payment tracking.  
-- **Link:** (add repo or demo link)
+- **Links:** Repo: https://github.com/itssudipkumar · Demo: https://itssudip.com#projects
 
-### TechnoForty — IT Company Website
+### TechnoForty : IT Company Website
 A full IT services website showcasing web development, cloud solutions, AI integration, and IT infrastructure services. Focused on responsive design, scalability, and polished business presentation.  
 - **Tech:** HTML/CSS, responsive design, content architecture  
 - **Highlights:** Business-focused UX, accessibility-first considerations.  
-- **Link:** (add repo or demo link)
+- **Links:** Repo: https://github.com/itssudipkumar · Demo: https://itssudip.com#projects
 
-### NCAP-VMS — Visitor Management System
+### NCAP-VMS : Visitor Management System
 Visitor entry and exit management app tracking registration details, company info, departments visited, and full visitor logs. Designed for organisational monitoring and workflow management.  
 - **Tech:** Web stack (server + client)  
 - **Highlights:** Robust logging, organisation-focused workflows, and administrative features.  
-- **Link:** (add repo or demo link)
-
-### AI Companion Chat System (Academic)
-Python-based conversational system integrating the OpenAI API. Architecture and documentation are complete; development includes conversational flow testing and API response refinement.  
-- **Tech:** Python, OpenAI API  
-- **Highlights:** Conversational AI prototypes and technical documentation.  
-- **Link:** (add repo link)
+- **Links:** Repo: https://github.com/itssudipkumar · Demo: https://itssudip.com#projects
 
 ---
 
@@ -80,21 +74,8 @@ If you want to reach out about a role or collaboration, a short summary of the p
 
 ---
 
-## 🛠 How I Work
-- Prototype quickly, validate with users, then iterate.  
-- Emphasise clear documentation and testable deliverables.  
-- Use metrics to inform decisions and validate impact.
 
----
-
-## ✅ Next steps for you to complete
-- Add direct links to repos / live demos for featured projects.  
-- Replace or expand tech stack items with exact tooling (versions, frameworks).  
-- Include 1–3 quantifiable outcomes for featured projects where available.
-
----
-
-*Generated on: June 1, 2026*
+Updated on: June 1, 2026
 
 
 
